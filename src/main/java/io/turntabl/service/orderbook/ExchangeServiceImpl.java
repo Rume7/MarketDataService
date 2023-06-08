@@ -101,7 +101,7 @@ public class ExchangeServiceImpl implements ExchangeService {
     }
 
     private boolean confirmTickerExists(String ticker) {
-        return exchangeTickerService.validateTicker(ticker);
+        return !exchangeTickerService.validateTicker(ticker);
     }
 
     private String buildUrl(String... args) {
